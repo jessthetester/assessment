@@ -1,4 +1,12 @@
 // An example configuration file.
+require("babel-register")({
+    presets: ["env"],
+    plugins: [
+        "transform-runtime",
+        "transform-async-to-generator"
+    ]
+});
+
 exports.config = {
     directConnect: true,
 
@@ -18,4 +26,5 @@ exports.config = {
     jasmineNodeOpts: {
         defaultTimeoutInterval: 30000
     }
+
 };
